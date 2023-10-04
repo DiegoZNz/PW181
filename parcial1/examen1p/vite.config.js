@@ -13,10 +13,10 @@ export default defineConfig({
             // Importamos Bootstrap 5
             resolve:{
                 alias:{
-                '~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap'),
+                    '~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap'),
                 }
-                },
-                // Fin Importamos Bootstrap 5
+            },
+            // Fin Importamos Bootstrap 5
         }),
     ],
 });
