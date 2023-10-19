@@ -1,52 +1,29 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
-
 // instrucciones para la importacion de controladores
 use App\Http\Controllers\diarioController;
  
 // Así se declaran las rutas individuales
 
 
-/*
 Route::get('/', [diarioController::class, 'metodoInicio'])->name('apodoinicio');
 
 Route::get('/formulario', [diarioController::class, 'metodoFormulario'])->name('apodoformulario');
 
 Route::get('/recuerdos', [diarioController::class, 'metodoRecuerdos'])->name('apodorecuerdos');
-*/
 
+Route::post('/guardarRecuerdo', [diarioController::class, 'metodoGuardarRecuerdo'])->name('guardarRecuerdo');
 
 //Así se declaran las rutas agrupadas
-
+/*
 Route::controller(diarioController::class)->group(function (){
-
-
     Route::get('/', 'metodoInicio')->name('apodoinicio');
 
     Route::get('/formulario', 'metodoFormulario')->name('apodoformulario');
 
     Route::get('/recuerdos', 'metodoRecuerdos')->name('apodorecuerdos');
-
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*/
 /*
 Route::get('/', function () {
     return view('welcome');
@@ -66,10 +43,10 @@ Route::get('/recuerdos', function () {
     return view('recuerdos');
 });
 
-
 #creacion de rutas de tipo vista 
 
 Route::view('/', 'welcome')->name('apodoinicio');
 Route::view('/formulario', 'formulario')->name('apodoformulario');
 Route::view('/recuerdos', 'recuerdos')->name('apodorecuerdos');
+
 */

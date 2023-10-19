@@ -22,4 +22,16 @@ class diarioController extends Controller
         return view('recuerdos');
     }
 
+    public function metodoGuardarRecuerdo(Request $request){
+        
+        echo "El titulo es: ".$request->input('txtTitulo')."<br>";
+        echo "El recuerdo es: ".$request->input('txtRecuerdo')."<br>";
+        echo $request->ip();
+        echo " - ";
+        echo $request->path();
+        echo " - ";
+        echo $request->method();
+        
+    }
+
 }
