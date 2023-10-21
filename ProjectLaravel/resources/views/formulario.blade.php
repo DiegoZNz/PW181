@@ -17,11 +17,11 @@
               @csrf
                 <div class="mb-3">
                   <label for="titulo" class="form-label">Título</label>
-                  <input type="text" name="txtTitulo" class="form-control" id="titulo" required>
+                  <input type="text" name="txtTitulo" class="form-control" id="titulo">
                 </div>
                 <div class="mb-3">
                   <label for="recuerdo" class="form-label">Recuerdo</label>
-                  <input type="text" name="txtRecuerdo" class="form-control" id="recuerdo" required>
+                  <input type="text" name="txtRecuerdo" class="form-control" id="recuerdo">
                 </div>
             
                 

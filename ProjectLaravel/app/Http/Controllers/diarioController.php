@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+//importamos el validador
+use App\Http\Requests\validatorFormRecuerdos;
+
 class diarioController extends Controller
 {
     //Creacion de funciones para el controlador
@@ -22,15 +25,27 @@ class diarioController extends Controller
         return view('recuerdos');
     }
 
-    public function metodoGuardarRecuerdo(Request $request){
+    public function metodoGuardarRecuerdo(validatorFormRecuerdos $request){
+
+        //malas practicas
+       /*  $validated = $request->validate([
+            'txtTitulo' => 'required|max:26',
+            'txtRecuerdo' => 'required|min:4',
+        ]); */
+
         
-        echo "El titulo es: ".$request->input('txtTitulo')."<br>";
+        return $request->all();
+
+
+
+
+        /* echo "El titulo es: ".$request->input('txtTitulo')."<br>";
         echo "El recuerdo es: ".$request->input('txtRecuerdo')."<br>";
         echo $request->ip();
         echo " - ";
         echo $request->path();
         echo " - ";
-        echo $request->method();
+        echo $request->method(); */
         
     }
 
