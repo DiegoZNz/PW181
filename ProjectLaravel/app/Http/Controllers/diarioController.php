@@ -33,10 +33,8 @@ class diarioController extends Controller
             'txtRecuerdo' => 'required|min:4',
         ]); */
 
-        
-        return $request->all();
-
-
+        //el primer parametro que le pasamos con with es la key y el segundo es el valor
+        return redirect('/formulario')->with('Exito', 'Recuerdo guardado con exito');
 
 
         /* echo "El titulo es: ".$request->input('txtTitulo')."<br>";
@@ -46,7 +44,6 @@ class diarioController extends Controller
         echo $request->path();
         echo " - ";
         echo $request->method(); */
-        
     }
 
 }
