@@ -21,8 +21,6 @@ class BookController extends Controller
         $titulo = $request->input('txtTitle');
         return redirect('/Form')->with('Exito', 'Libro ' . $titulo . ' guardado con éxito');
 
-        
-    
     
     }
 

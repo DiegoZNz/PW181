@@ -22,13 +22,14 @@ class BookControllerValidator extends FormRequest
     public function rules(): array
     {
         return [
-            //necesito validaciones para ISBN- validación de solo números, Mínimo 13 números Páginas- validación de solo números Email de Editorial- validación de formato de correo
-            'txtIsnb' => 'required|numeric|min:13',
+            //validación corregida con el uso de digits para el isbn que solo sean 13 dígitos, ni más ni menos.
+            'txtIsnb' => 'required|numeric|digits:13',
             'txtTitle' => 'required',
             'txtAuthor' => 'required',
             'txtPages' => 'required|numeric',
             'txtEditorial' => 'required',
             'txtEmailEditorial' => 'required|email',
+            
         ];
     }
 }

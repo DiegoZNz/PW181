@@ -36,7 +36,7 @@
                           <label for="txtIsnb" class="form-label">ISBN</label>
                           <div class="input-group">
                               <span class="input-group-text"><i class="fa fa-barcode"></i></span>
-                              <input class="form-control" type="number" name="txtIsnb" value="{{ old('txtIsnb') }}" class="form-control" id="txtIsnb" placeholder="Ejemplo: 9780123456789">
+                              <input class="form-control" type="text" name="txtIsnb" value="{{ old('txtIsnb') }}" class="form-control" id="txtIsnb" placeholder="Ejemplo: 9780123456789">
                           </div>
                           <p class="text-warning">{{ $errors->first('txtIsnb') }}</p>
                       </div>
