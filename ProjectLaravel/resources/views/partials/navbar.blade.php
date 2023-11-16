@@ -11,14 +11,14 @@
             <a class="nav-link {{request ()-> routeIS('apodoinicio')?'text-danger fw-bold':''}}" aria-current="page" href="{{route ('apodoinicio')}}">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {{request ()-> routeIS('apodoformulario')?'text-danger fw-bold':''}}" href="{{route ('apodoformulario')}}">Formulario</a>
+            <a class="nav-link {{request ()-> routeIS('recuerdo.create')?'text-danger fw-bold':''}}" href="{{route ('recuerdo.create')}}">Formulario</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Dropdown
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/recuerdos">Recuerdos</a></li>
+              <li><a class="dropdown-item" href="{{route ('recuerdo.index')}}">Recuerdos</a></li>
               <li><a class="dropdown-item" href="#">Another action</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">Something else here</a></li>
