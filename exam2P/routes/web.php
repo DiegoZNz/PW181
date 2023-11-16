@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\VideogamesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get("/", [VideogamesController::class, "formulario"])->name("formulario");
+
+Route::post("/guardarVideoJuego", [VideogamesController::class, "guardarVideoJuego"])->name("guardarVideoJuego");
