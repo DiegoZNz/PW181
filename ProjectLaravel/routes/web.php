@@ -13,7 +13,9 @@ Route::post('/recuerdo/store', [CrudController::class, 'store'])->name('recuerdo
 
 Route::get('/recuerdo/index', [CrudController::class, 'index'])->name('recuerdo.index');
 
+Route::put('/recuerdo/{id}/confirm', [CrudController::class, 'update'])->name('recuerdo.update');
 
+Route::put('/recuerdo/{id}/delete', [CrudController::class, 'destroy'])->name('recuerdo.destroy');
 
 
 

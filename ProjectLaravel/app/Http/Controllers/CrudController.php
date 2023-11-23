@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\validatorFormRecuerdos;
 
+
+
 //importamos el query builder
 
 use Illuminate\Support\Facades\DB;
@@ -36,12 +38,12 @@ class CrudController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(validatorFormRecuerdos $request) 
     {
-        //se prepara un array con los datos que se van a insertar
+        $validated = $request->validated();
         DB::table('tb_recuerdos')->insert([
-            'titulo' => $request->input('txtTitulo'),
-            'recuerdo' => $request->input('txtRecuerdo'),
+            'titulo' => $validated['txtTitulo'],
+            'recuerdo' => $validated['txtRecuerdo'],
             'fecha' => Carbon::now(),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
@@ -60,24 +62,41 @@ class CrudController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(validatorFormRecuerdos $request, string $id)  
     {
-        //
+    
+      $validated = $request->validated();  
+    
+      DB::table('tb_recuerdos')
+        ->where('id', $id)
+        ->update([
+            'titulo' => $validated['txtTitulo'],
+            'recuerdo' => $validated['txtRecuerdo'],  
+            'updated_at' => Carbon::now()
+        ]);
+    
+      return redirect("/recuerdo/index")->with('Exito', 'Recuerdo actualizado con exito');
+    
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
-    {
-        //
+    /** 
+ * Remove the specified resource from storage.
+*/
+
+    public function destroy(string $id) {
+
+        DB::table('tb_recuerdos')
+        ->where('id', '=', $id)
+        ->delete();
+    
+        return redirect('/recuerdo/index')
+        ->with('Exito', 'Recuerdo eliminado con éxito'); 
     }
 }
