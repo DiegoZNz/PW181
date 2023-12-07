@@ -1,14 +1,20 @@
 # PW181
 Proyectos realizados en la materia de Programación Web, del 7mo cuatrimestre de la carrera de Ingeniería en Sistemas Computacionales de la Universidad Politécnica de Querétaro
 
-La calificación del primer parcial obtenida en la materia fue de 9.8
+**La calificación promediada obtenida en la materia fue de 10.**
 
-Los temas abordados en la materia incluyen:
+A lo largo del curso, adquirí conocimientos y habilidades en:
 
-Inicializar proyecto en laravel 
++ Inicialización de proyectos con Laravel
++ Integración de Bootstrap
++ Creación de distintas rutas
++ Herencia de plantillas
++ Migraciones
++ Eloquent ORM
++ Query Builder
++ Despliegue de aplicaciones Laravel
 
-Instalación de bootstrap en el proyecto
 
-Creación de distintos tipos de rutas
+Los proyectos cubrieron aspectos importantes del desarrollo web como enrutamiento, base de datos, vistas, controladores y modelos. Aplicando buenas prácticas de programación y patrones de diseño.
 
-Herencia de plantillas
+Este curso me brindó una sólida base en el desarrollo de aplicaciones web modernas. Los conocimientos y habilidades obtenidas sin duda serán de mucha utilidad en mis próximos proyectos.
